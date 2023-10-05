@@ -18,6 +18,7 @@ alert(`My favorite color is also: ${userFavColor}`);
 //If price for a movie per day is $3, how much will you have to pay?
 
 const costOfMovieRental = 3;
+alert(`Movies cost $3 per day.`);
 
 let lilMermaidDaysRented = prompt("how many days would you like to rent the little mermaid?");
 let costOfLilMermaid = parseInt(lilMermaidDaysRented) * costOfMovieRental;
@@ -40,8 +41,11 @@ alert(`Your total cost for all of your movies will be: ${totalRentalCost}`);
 //You worked 10 hours for Facebook, 6 hours for Google and 4 hours for Amazon.
 
 const hourlyPayAtGoogle = 400;
+alert(`Google's Starting wage is $400 per hour.`);
 const hourlyPayAtAmazon = 380;
+alert(`Amazons starting wage is $380 per hour.`);
 const hourlyPayAtFacebook = 350;
+alert(`Facebook's starting wage is $350 per hour.`);
 
 let workedHoursAtGoogle = prompt("How many hours did you work at google this week?");
 let weeklyPayFromGoogle = parseInt(workedHoursAtGoogle) * hourlyPayAtGoogle;
