@@ -1,8 +1,8 @@
 // create a function named isCoding that logs "I LOVE CODING" to the console
 
-////////////////////////////////////////////////////
-// This function is called a function decleration//
-//////////////////////////////////////////////////
+/////////////////////////////////////////////////////
+// This function is called a function decleration //
+///////////////////////////////////////////////////
 
 // function isCoding(userFullName){
 //     console.log(` ${userFullName} LOVES CODING!!`);
@@ -10,9 +10,9 @@
 // isCoding("Casper");
 // isCoding("Isaac");
 
+/////////////////////////////////////
+// Annonymous Function Expression //
 ///////////////////////////////////
-//Annonymous Function Expression//
-/////////////////////////////////
 
 // const sayHello = function(userName){
 //     console.log(`hello ${userName}`);
@@ -88,8 +88,12 @@
 //   const localVariable = "I am local";
 //   console.log(global);
 // };
-//
-// tieFighter(globalVar);
+// tieFighter(localVariable); //this won't work because it's stored within the function
+// tieFighter(globalVar); // this global variable can be call anywhere
+
+///////////////////////////
+// Functions Excersizes //
+/////////////////////////
 
 /**
  * TODO:
@@ -114,8 +118,8 @@ const sayHello = (name) =>{
  * console.log 'helloMessage' to check your work
  */
 
-// let helloMessage = sayHello('casper');
-// console.log(helloMessage);
+let helloMessage = sayHello('casper');
+console.log(helloMessage);
 
 /**
  * TODO:
@@ -124,8 +128,8 @@ const sayHello = (name) =>{
  * console.
  */
 
-// const myName = "Casper"
-// console.log(sayHello(myName));
+const myName = "Casper"
+console.log(sayHello(myName));
 
 
 // Don't modify the following line, it generates a random number between 1 and 3
@@ -138,9 +142,9 @@ const random = Math.floor((Math.random() * 3) + 1);
  * The function should return a boolean value based on whether or not the passed
  * number is the number 2.
  **/
-// const isTwo = (aNumber) =>{
-//     return aNumber == 2;
-// }
+const isTwo = (aNumber) =>{
+    return aNumber == 2;
+}
 
  /** Example
  * > isTwo(1) // returns false
@@ -152,8 +156,8 @@ const random = Math.floor((Math.random() * 3) + 1);
  * number)
  */
 
-// console.log(random);
-// console.log(isTwo(random));
+console.log(random);
+console.log(isTwo(random));
 
 /**
  * TODO:
@@ -167,9 +171,9 @@ const random = Math.floor((Math.random() * 3) + 1);
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
 
-// const calculateTip = (tipPercent, bill) =>{
-//     return (100 * tipPercent) / bill;
-// };
+const calculateTip = (tipPercent, bill) =>{
+    return (100 * tipPercent) / bill;
+};
 
 /**
  * TODO:
@@ -178,12 +182,12 @@ const random = Math.floor((Math.random() * 3) + 1);
  * then display the dollar amount they should tip
  */
 
-// let restrauntBill = prompt(`how much was your bill today?`);
-// let leaveATip = prompt(`would you like to leave a 10 15 or custom percent tip today?`);
-//
-// let totalTip = calculateTip(parseFloat(leaveATip),parseFloat(restrauntBill));
-//
-// alert(`thank you for your generous tip of ${totalTip}`);
+let restrauntBill = prompt(`how much was your bill today?`);
+let leaveATip = prompt(`would you like to leave a 10 15 or custom percent tip today?`);
+
+let totalTip = calculateTip(parseFloat(leaveATip),parseFloat(restrauntBill));
+
+alert(`thank you for your generous tip of ${totalTip}`);
 
 /**
  * TODO:
