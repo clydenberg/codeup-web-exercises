@@ -128,7 +128,7 @@ console.log(helloMessage);
  * console.
  */
 
-const myName = "Casper"
+const myName = "Casper";
 console.log(sayHello(myName));
 
 
@@ -143,7 +143,8 @@ const random = Math.floor((Math.random() * 3) + 1);
  * number is the number 2.
  **/
 const isTwo = (aNumber) =>{
-    return aNumber == 2;
+    console.log(aNumber);
+    return aNumber === 2;
 }
 
  /** Example
@@ -154,9 +155,8 @@ const isTwo = (aNumber) =>{
  * console.log *outside of the function* to check your work (you should see a
  * different result everytime you refresh the page if you are using the random
  * number)
- */
+  */
 
-console.log(random);
 console.log(isTwo(random));
 
 /**
