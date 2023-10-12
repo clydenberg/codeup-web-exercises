@@ -40,20 +40,24 @@
         console.log(nameList);
     }
 
+    for(let name of names){
+        console.log(name);
+    }
+
 
     /**
      * TODO:
      * Refactor your above code to use a `forEach` loop
      */
 
-    names.forEach(name => {
+    names.forEach((name) => {
         console.log(name);
     })
 
     /**
      * TODO:
      * Create the following three functions, each will accept an array and
-     * return an an element from it
+     * return an element from it
      * - first: returns the first item in the array
      * - second: returns the second item in the array
      * - last: returns the last item in the array
