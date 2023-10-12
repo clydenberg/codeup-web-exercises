@@ -44,7 +44,7 @@
 //  88888888
 //  999999999
 
-//USE THE STRING METHOD REPEAT
+//USE THE .REPEAT METHOD
 
 // const numberPyramid = (num) => {
 //     for(let i = 1; i <= num; i++){
