@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Date Object</title>
+</head>
+<body>
+<script>
+'use strict';
+
+// todo:
+// Create an array of months for printing dates
+let months = [
+'Jan',
+'Feb',
+'Mar',
+'Apr',
+'May',
+'Jun',
+'Jul',
+'August',
+'Sep',
+'Oct',
+'Nov',
+'Dec',
+];
+
+// todo:
+// Create the date corresponding to your birthday using the JavaScript Date object.
+
+let jsBirthday = new Date("August 18,1998");
+console.log(jsBirthday);
+
+let Today = new Date();
+Today.getDate();
+
+// todo:
+// Log your birthday in the format: January 1, 2014 using the JavaScript Date object.
+// See link below for methods needed:
+//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#Getter
+
+console.log('Here is my birthday using JavaScript: ');
+
+console.log("Month =>", months[jsBirthday.getMonth()]);
+console.log("Day =>", jsBirthday.getDate());
+console.log("Year =>", jsBirthday.getFullYear());
+
+
+
+</script>
+</body>
+</html>
