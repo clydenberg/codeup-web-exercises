@@ -1,3 +1,98 @@
+
+    /*Basic JavaScript Function:*/
+// Declare a constant function 'add' that takes two arguments 'a' and 'b'
+const add = (a, b) => a + b;
+
+// Example usage: Call the 'add' function with 5 and 3 as arguments, and store the result in 'result'
+const result = add(5, 3); // result will be 8
+
+
+
+
+/*String Manipulation Function:
+  */
+// Declare a constant function 'capitalizeFirstLetter' that takes a string argument 'str'
+const capitalizeFirstLetter = (str) => str.charAt(0).toUpperCase() + str.slice(1);
+
+// Example usage: Call the 'capitalizeFirstLetter' function with 'hello' as an argument and store the result in 'capitalizedString'
+const inputString = "hello";
+const capitalizedString = capitalizeFirstLetter(inputString); // "Hello"
+
+
+
+
+/**Array Manipulation Function:*/
+// Declare a constant function 'findMax' that takes an array argument 'arr'
+const findMax = (arr) => Math.max(...arr);
+
+// Example usage: Call the 'findMax' function with an array of numbers and store the result in 'maxNumber'
+const numbers = [10, 5, 20, 15];
+const maxNumber = findMax(numbers); // 20
+
+
+
+
+//Event Handling Function://
+// Declare a constant function 'handleClick' using an arrow function
+const handleClick = () => {
+    alert("Button Clicked!");
+}
+
+// Add an event listener to a button element with the id 'myButton' and call 'handleClick' when the button is clicked
+const button = document.getElementById("myButton");
+button.addEventListener("click", handleClick);
+
+
+
+
+/*Async Function (Promises):*/
+// Declare a constant function 'fetchData' using an arrow function
+const fetchData = () => {
+    // Use the Fetch API to make a network request to the specified URL
+    return fetch("https://api.example.com/data")
+        // Chain a 'then' method to handle the response and parse it as JSON
+        .then(response => response.json())
+        // Chain another 'then' method to log the parsed data
+        .then(data => {
+            console.log(data);
+        })
+        // Chain a 'catch' method to handle errors and log them
+        .catch(error => {
+            console.error("Error: " + error);
+        });
+}
+
+
+
+/*Arrow Function:*/
+// Declare a constant function 'double' that takes a 'number' as an argument and returns its doubled value
+const double = (number) => number * 2;
+
+// Example usage: Call the 'double' function with 7 as an argument and store the result in 'result'
+const result = double(7); // 14
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ///////////////////////////////////////////////////////////
 // I will be testing different code here in my free time//
 /////////////////////////////////////////////////////////
