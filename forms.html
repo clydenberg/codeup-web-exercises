@@ -16,55 +16,74 @@
         <section>
             <h2>Input Email and Password</h2>
 
-                <label for="email">Email</label>
-                <input id="email" name="email" type="text" required>
+                <label for="email">
+                    <span>Email</span>
+                    <input id="email" name="email" type="email" placeholder="email" required>
+                </label>
                 </br>
 
-                <label for="password">Password</label>
-                <input id="password" name="password" type="text" required>
+                <label for="password">
+                    <span>Password</span>
+                    <input id="password" name="password" type="password" placeholder="password" required>
+                </label>
                 </br>
         </section>
         <section>
             <h2>Enter a Bio</h2>
-
-                <textarea name="bio"></textarea>
+            <label>
+                <span>BIO</span>
+                <textarea id="bio" name="bio" placeholder="Write Bio Here"></textarea>
+            </label>
                 </br>
         </section>
         <section>
             <h2>How did you find us?</h2>
 
-                <label for="FindUs">BillBoard</label>
-                <input type="radio" id="FindUs" name="FindUs" value="billboard">
+                <label for="billboard">
+                    <input type="checkbox" id="FindUs" name="FindUs" value="billboard" required>
+                    <span>BillBoard</span>
+                </label>
                 </br>
 
-                <label for="FindUs">Radio Advertisement</label>
-                <input type="radio" id="FindUs" name="FindUs" value="radio_advertisement">
+                <label for="radio_adv">
+                    <input type="checkbox" id="FindUs" name="FindUs" value="radio_advertisement">
+                    <span>Radio Advertisement</span>
+                </label>
                 </br>
 
-                <label for="FindUs">Internet Advertisement</label>
-                <input type="radio" id="FindUs" name="FindUs" value="internet_advertisement">
+                <label for="internet_adv">
+                    <input type="checkbox" id="FindUs" name="FindUs" value="internet_advertisement">
+                    <span>Internet Advertisement</span>
+                </label>
                 </br>
 
-                <label for="FindUs">Other</label>
-                <input type="radio" id="FindUs" name="FindUs" value="other">
+                <label for="other">
+                    <input type="checkbox" id="FindUs" name="FindUs" value="other">
+                    <span>Other</span>
+                </label>
                 </br>
 
         </section>
         <section>
 
             <h2>What browser are you using?</h2>
-
-                <select name="browser_preference">
+            <label>
+                <span>Browsers</span>
+                <select id="web_browser" name="browser_preference">
                     <option value="chrome">Google Chrome</option>
                     <option value="safari">Safari</option>
                     <option value="firefox">FireFox</option>
                     <option value="other">Other</option>
                 </select>
+            </label>
                 </br>
         </section>
+
         <footer>
+            </br>
             <button type="submit">GO</button>
         </footer>
+
     </form>
 </body>
 </html>
