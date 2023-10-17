@@ -1,0 +1,20 @@
+/*command forward slash to make comments*/
+body{
+    font-family: fantasy;
+    color: #25002c;
+}
+h1{
+    color: darkorchid;
+    text-transform: full-size-kana;
+    letter-spacing: 5px;
+}
+p{
+    font-style: italic;
+}
+img{
+    display: block;
+    max-width: 100%;
+}
+.article-background{
+    background-color: #eee;
+}
