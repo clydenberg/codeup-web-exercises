@@ -10,52 +10,61 @@
 <body>
     <form method="POST" action="https://request-inspector.glitch.me/">
 
-        <h1>Register With US</h1>
+        <header>
+            <h1>Register With Us</h1>
+        </header>
+        <section>
+            <h2>Input Email and Password</h2>
 
-        <h2>Input Email and Password</h2>
+                <label for="email">Email</label>
+                <input id="email" name="email" type="text" required>
+                </br>
 
-        <label for="email">Email</label>
-        <input id="email" name="email" type="text" required>
-        </br>
+                <label for="password">Password</label>
+                <input id="password" name="password" type="text" required>
+                </br>
+        </section>
+        <section>
+            <h2>Enter a Bio</h2>
 
-        <label for="password">Password</label>
-        <input id="password" name="password" type="text" required>
-        </br>
+                <textarea name="bio"></textarea>
+                </br>
+        </section>
+        <section>
+            <h2>How did you find us?</h2>
 
-        <h2>Enter a Bio</h2>
+                <label for="FindUs">BillBoard</label>
+                <input type="radio" id="FindUs" name="FindUs" value="billboard">
+                </br>
 
-        <textarea name="bio"></textarea>
-        </br>
+                <label for="FindUs">Radio Advertisement</label>
+                <input type="radio" id="FindUs" name="FindUs" value="radio_advertisement">
+                </br>
 
-        <h2>How did you find us?</h2>
+                <label for="FindUs">Internet Advertisement</label>
+                <input type="radio" id="FindUs" name="FindUs" value="internet_advertisement">
+                </br>
 
-            <label for="FindUs">BillBoard</label>
-            <input type="radio" id="FindUs" name="FindUs" value="billboard">
-            </br>
+                <label for="FindUs">Other</label>
+                <input type="radio" id="FindUs" name="FindUs" value="other">
+                </br>
 
-            <label for="FindUs">Radio Advertisement</label>
-            <input type="radio" id="FindUs" name="FindUs" value="radio_advertisement">
-            </br>
+        </section>
+        <section>
 
-            <label for="FindUs">Internet Advertisement</label>
-            <input type="radio" id="FindUs" name="FindUs" value="internet_advertisement">
-            </br>
+            <h2>What browser are you using?</h2>
 
-            <label for="FindUs">Other</label>
-            <input type="radio" id="FindUs" name="FindUs" value="other">
-            </br>
-
-        <h2>What browser are you using?</h2>
-
-            <select name="browser_preference">
-                <option value="chrome">Google Chrome</option>
-                <option value="safari">Safari</option>
-                <option value="firefox">FireFox</option>
-                <option value="other">Other</option>
-            </select>
-        </br>
-
-        <button type="submit">GO</button>
+                <select name="browser_preference">
+                    <option value="chrome">Google Chrome</option>
+                    <option value="safari">Safari</option>
+                    <option value="firefox">FireFox</option>
+                    <option value="other">Other</option>
+                </select>
+                </br>
+        </section>
+        <footer>
+            <button type="submit">GO</button>
+        </footer>
     </form>
 </body>
 </html>
