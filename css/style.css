@@ -1,4 +1,116 @@
-h1.fancy-header\"{
-    color: #7447a1;
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root{
+    --border-radius1: 10px;
+    --clr-primary1: #000000;
+    --clr-seconday1: #a4a4a4;
+    --clr-third1: #57698d
+}
+
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+.page-wrapper{
+    min-height: 100dvh;
+    background-color: salmon;
+    background-image: url("../img/pexels-markus-spiske-1679618.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Pixelify Sans', sans-serif;;
+    color: #25002c;
     text-decoration: underline;
 }
+
+h1{
+    text-align: center;
+}
+
+.opening-text{
+    text-align: center;
+    font-size: large;
+}
+
+ul{
+    list-style: square;
+}
+
+input{
+    min-height: 40px;
+    border-radius: 8px;
+    border: 1px solid darkgrey;
+    padding-left: 10px;
+    color: red;
+    font-family: inherit;
+}
+
+input::placeholder{
+    font-family: serif;
+    color: #000;
+}
+
+input:focus{
+    outline-color: red;
+}
+
+.op-tables{
+    text-align: center
+}
+
+table{
+    margin-left: auto;
+    margin-right: auto;
+}
+tr{
+    font-size: 1.5rem;
+}
+td{
+    padding: 10px 20px;
+}
+
+footer{
+    text-align: center;
+    padding: 10px 20px
+}
+
+.to-top-btn{
+    background-color: var(--clr-seconday1);
+    padding: 10px 20px;
+    font-weight: 300;
+    border-radius: var(--border-radius1);
+    transition: all ease 0.5s;
+}
+.to-top-btn:hover{
+    background-color: var(--clr-third1);
+}
+.to-top-btn:visited{
+    color: aqua;
+}
+
+div.pretty-pictures h2{
+    text-align: center;
+}
+
+div.pretty-pictures img{
+    width: 25%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    object-position: center;
+    transition: all ease 0.5s;
+}
+
+div.pretty-pictures img:hover{
+    transform: scale(1.1);
+}
+
+img{
+    border-radius: var(--border-radius1);
+}
+
