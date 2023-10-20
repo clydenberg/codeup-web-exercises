@@ -1,4 +1,6 @@
 
+
+//function to find the largest number in an array
 const findLargestNumber = (numbers) => {
         let largestNum = [0];
         if(Array.isArray(numbers) && numbers.length === 0){
@@ -18,6 +20,9 @@ const findLargestNumber = (numbers) => {
     const result = findLargestNumber(numbers);
     console.log(result);
 })();
+
+
+
 
 // Function to calculate the average grade of the students
 const calculateAverageGrade = (studentList) => {
@@ -59,24 +64,37 @@ const findTopStudent = (studentList) => {
     console.log(`Top Student: ${topStudent.name} (Grade: ${topStudent.grade})`);
 })();
 
-// Instructions:
+
+
+
+// Instructions: FIZZBUZZ
 // 1. Write the FizzBuzz logic within the fizzBuzz function.
 // 2. Use conditional statements and loops to determine if a number is divisible by 3, 5, or both.
 
 // Function to implement FizzBuzz for a given range
 const fizzBuzz = (start, end) => {
+    //this is our validation statement
+    if(typeof start === "boolean" || typeof end === "boolean"){
+        return false;
+    }
+    parseFloat(start);
+    parseFloat(end);
+    if(isNaN(start)||isNaN(end)){
+        return false;
+    }
+    //this is our happy path for when they feed valid arguments
     // Write your FizzBuzz logic here
     // Loop through numbers from start to end
     for(let i = start; i <= end; i++){
-        if(i / 3 && i / 5){
+        if(i % 3 === 0 && i % 5 === 0){
             console.log(`fizzbuzz`);
             // Check if the current number is divisible by 5
             // console.log "Buzz" if it is divisible by 5
-        }else if(i / 5){
+        }else if(i % 5 === 0){
             console.log(`buzz`);
             // Check if the current number is divisible by 3
             // console.log "Fizz" if it is divisible by 3
-        } else if(i / 3){
+        } else if(i % 3 === 0){
             console.log(`fizz`);
             // If the number is not divisible by 3 or 5, console.log the number itself
         } else{
