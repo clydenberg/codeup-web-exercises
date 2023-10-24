@@ -29,7 +29,9 @@ h2, h3 {
     width: 2em;
 }
 
-.border {border: 2px solid black;}
+.border {
+    border: 2px solid black;
+}
 
 .card {
     width: 400px;
@@ -38,6 +40,9 @@ h2, h3 {
     padding: 1em;
     margin: 0 auto;
     /* enter needed declarations here */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 section {
@@ -64,7 +69,7 @@ section:nth-of-type(1) div:last-child {
 }
 
 .purple-box:nth-of-type(1) {
-    flex: 50% 0 0;
+    flex: 2 0 auto;
     /* enter needed declarations here */
 }
 
@@ -86,7 +91,7 @@ section:nth-of-type(3) {
 }
 
 section:nth-of-type(3) h3 {
-    flex: 1 0 0;
+    flex: 3 0 0;
     /* enter needed declarations here */
 }
 
@@ -130,8 +135,8 @@ section:nth-of-type(5) {
 
 section:nth-of-type(6) {
     flex-wrap: wrap;
-    gap: 10px;
-    justify-content: space-evenly;
+    align-items: center;
+    justify-content: space-between;
     background: coral;
     height: 14em;
     /* enter needed declarations here */

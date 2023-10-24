@@ -104,4 +104,21 @@ const fizzBuzz = (start, end) => {
 };
 
 // Call the function to perform FizzBuzz for a specific range
-fizzBuzz(1, 100);
+//fizzBuzz(1, 100);
+
+const findLongestWord = (sentence) =>{
+    if(typeof sentence !== `string`){
+        return false;
+    }
+    let arrSentence = sentence.split(` `);
+    let longestWord ="";
+
+    for(let word of arrSentence){
+        if(word.length > longestWord.length ){
+            longestWord = word;
+        }
+    }
+    return longestWord;
+}
+
+console.log(findLongestWord(`The quick brown fox jumped over the lazy dog`));

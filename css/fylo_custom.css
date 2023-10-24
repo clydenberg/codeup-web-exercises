@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --button-color: #2F65F8;
+}
+
+body{
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    hyphens: none;
+}
+.row{
+    max-width: 1320px;
+}
+
+.container.header{
+    margin-top: 65px;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+img#header-img{
+    max-width: 75%;
+}
+
+section#hero-section{
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: "raleway" , sans-serif;
+}
+.container.hero h1{
+    font-weight: 40px;
+}
+h2{
+    font-weight: 40px;
+}
+
+.container#herosection{
+    min-height: 834px;
+}
+
+.container#hero-section .row{
+    gap: 55px;
+}
+
+.container#hero-section p{
+    font-size: 17px;
+    letter-spacing: .5;
+}
+
+button#submit-form{
+    font-family: "raleway" "sans-serif";
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    background-color: var(--button-color);
+    border-radius: 3.13px;
+    border: black;
+    max-height: 45px;
+    max-width: 200px;
+}
+
+::placeholder {
+    font-family: "raleway" "sans-serif";
+    font-size: 14px;
+    padding-left: 10px;
+}
+.container#productive{
+    padding-top: 178px;
+    padding-bottom: 107px;
+}
+
+label{
+    font-weight: "Open Sans" "sans-serif";
+}
+
+label.fylo-works{
+    color: #3DA08F;
+    text-decoration: underline;
+}
+
+div.quote-box{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 25px;
+    padding-bottom: 20px;
+    background-color: #ffffff;
+    max-width: 356px;
+    border-radius: 5px;
+}
+
+img.avatar {
+    width: 50px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 999px;
+}
+
+p.avatar{
+    font-weight: bold;
+    font-size: 11px;
+}
+p.avatar-status{
+    font-size: 8px;
+}
+
+section#productive{
+    padding-top: 45px;
+    background-color:#F8F8FE;
+}
+
+
+section.CTA{
+    background-color: #575988;
+    min-height: 322px;
+    padding-top: 100px;
+    padding-bottom: 85px;
+}
+
+div.CTA-row{
+    gap: 227px;
+}
+
+div.early-access{
+    color: #ffffff;
+    gap: 15px;
+}
+
+footer.daFooter{
+    background-color: #07043B;
+    min-height: 391px;
+}
+
+div.belowFoot{
+
+}
+
+div.socialLinks{
+    align-items: center;
+    justify-content: end;
+    gap: 10px;
+    flex-direction: row;
+}
+
+img.faceBook{
+    max-width: 35px;
+    border-radius: 100px;
+
+}
+
+img.twitter{
+    max-width: 35px;
+    border-radius: 100px;
+}
+
+img.instaGram{
+    max-width: 35px;
+    border-radius: 100px;
+}
+
+div#phone p{
+    color: #ffffff;
+}
+div#email p{
+    color: #ffffff;
+}
+div.phoneNum{
+    margin-bottom: 110px;
+    align-items: start;
+}
+img.theyLogo{
+    max-height: 39px;
+    max-width: 135px;
+    color: #ffffff;
+}
+img.somePhone{
+    max-width: 24px;
+    aspect-ratio: 1:1;
+}
+img.emailIcon{
+    max-width: 24px;
+    aspect-ratio: 1:1;
+}
+
+ul.aboutUs{
+    color: #ffffff;
+}
+li.justThisONe{
+    margin-top: 45px;
+}
+
+div.about{
+    justify-content: center;
+    align-items: end;
+}
+ul.contactUs{
+    color: #ffffff;
+}
