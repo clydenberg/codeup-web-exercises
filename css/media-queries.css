@@ -1,0 +1,90 @@
+
+.headContainer{
+    min-height: 100px;
+}
+.skipContent{
+    position: absolute;
+    top:-50px;
+}
+.headerH1{
+    order: 1;
+}
+.navHeader{
+    order: 2;
+}
+
+div.hero-img img{
+    width: 100%;
+}
+
+footer.container{
+}
+
+footer div.row{
+    min-height: 150px;
+}
+
+.socialMedia{
+}
+
+footer div.socialIcons img {
+    width: 35px;
+}
+
+@media screen and (max-width: 800px){
+
+    header.container .row{
+        flex-direction: column;
+        align-items: unset;
+        margin-bottom: 10px;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .skipContent{
+        margin-top: 5px;
+        position: static;
+        background-color: lightblue;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border: solid #a4a4a4;
+
+    }
+
+    .column.headerH1{
+        align-items: unset;
+        justify-content: unset;
+    }
+
+    header.container .column.navHeader {
+        align-items: stretch;
+    }
+
+    ul.nav-links{
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    ul.nav-links li{
+        background-color: #a4a4a4;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        text-decoration: underline;
+        color: darkblue;
+    }
+
+    .column.heroColumn{
+        margin-top: 15px;
+    }
+
+    .column.mainSection{
+        margin-top: 10px;
+    }
+    .column.subSection{
+        margin-top: 40px;
+    }
+    section#main .row{
+        flex-direction: column;
+    }
+}

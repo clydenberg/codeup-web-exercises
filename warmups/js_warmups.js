@@ -18,7 +18,7 @@ const findLargestNumber = (numbers) => {
 (()=> {
     const numbers = [42,17,8,94,23,61,12,51,6];
     const result = findLargestNumber(numbers);
-    console.log(result);
+    // console.log(result);
 })();
 
 
@@ -60,8 +60,8 @@ const findTopStudent = (studentList) => {
     const averageGrade = calculateAverageGrade(students);
     const topStudent = findTopStudent(students);
 
-    console.log(`Average Grade: ${averageGrade}`);
-    console.log(`Top Student: ${topStudent.name} (Grade: ${topStudent.grade})`);
+    // console.log(`Average Grade: ${averageGrade}`);
+    // console.log(`Top Student: ${topStudent.name} (Grade: ${topStudent.grade})`);
 })();
 
 
@@ -121,4 +121,64 @@ const findLongestWord = (sentence) =>{
     return longestWord;
 }
 
-console.log(findLongestWord(`The quick brown fox jumped over the lazy dog`));
+// console.log(findLongestWord(`The quick brown fox jumped over the lazy dog`));
+
+const students = [
+    `Amanda`,
+    `Bianca`,
+    `Cameron`,
+    `Chris`,
+    `Dany`,
+    `David`,
+    `Diana`,
+    `Drew`,
+    `Evan`,
+    `Hassan`,
+    `Jack`,
+    `Jason`,
+    `John`,
+    `Johnathan`,
+    `Jordan`,
+    `Joshua`,
+    `Katie`,
+    `Luis`,
+]
+const shuffle = (arr) =>{
+    let shuffled;
+    let i = arr.length
+    let j;
+        while(--i > 0){
+            j = Math.floor(Math.random() * (i + 1));
+            shuffled = arr[j];
+            arr[j] = arr [i];
+            arr[i] = shuffled;
+        }
+        return (arr);
+}
+
+const createPairs = (arr) =>{
+    if(!Array.isArray(arr)){
+        return false;
+    }
+    if(arr.length <= 2){
+        return false;
+    }
+    arr = shuffle(arr);
+    let studentPairs = [];
+
+    while (arr.length > 0){
+        let pair = [];
+        let student1 = arr.pop();
+        if(arr.length === 0){
+            studentPairs[studentPairs.length - 1].push(student1);
+        }else {
+            pair.push(student1);
+            let student2 = arr.pop();
+            pair.push(student2);
+            studentPairs.push(pair);
+        }
+    }
+    console.log(studentPairs);
+}
+
+createPairs(students);

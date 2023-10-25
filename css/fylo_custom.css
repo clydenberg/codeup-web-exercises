@@ -203,3 +203,30 @@ div.about{
 ul.contactUs{
     color: #ffffff;
 }
+
+@media screen and (max-width: 840px){
+    .container#hero-section .row{
+        flex-direction: column;
+    }
+    .container#hero-section .column:first-child{
+        order: 2;
+    }
+    .container#hero-section .column:last-child{
+        order: 1;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    header.container .header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    header.container .header:first-child {
+        align-items: center;
+    }
+
+    header.container .header:last-child {
+        align-items: center;
+    }
+}

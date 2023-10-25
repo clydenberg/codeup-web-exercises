@@ -1,0 +1,48 @@
+@import "position-lecture-base.css";
+
+/* This is the file we will use to experiment with position */
+
+.container {
+  position: static;
+  overflow: scroll;
+  max-height: 400px;
+}
+
+/*#item-1{*/
+/*  position: relative;*/
+/*  transition: .3s;*/
+/*  top: 0px;*/
+/*  z-index: 1;*/
+/*  left:0px;*/
+/*}*/
+
+/*#item-1:hover{*/
+/*  top: 30px;*/
+/*}*/
+
+/*#item-1 span{*/
+/*  position: absolute;*/
+/*  background-color: #fff;*/
+/*  border-radius: 3px;*/
+/*  padding: 5px 10px;*/
+/*  color: #000;*/
+/*  bottom: 0px;*/
+/*  box-shadow: 0px 0px 10px #000000;*/
+/*  left: 300px;*/
+/*}*/
+
+/*#item-2{*/
+/*  position: relative;*/
+/*  z-index: 2;*/
+/*}*/
+
+/*#item-1{*/
+/*  position: fixed;*/
+/*  left: 0;*/
+/*}*/
+
+/*#item-1{*/
+/*  position: sticky;*/
+/*  top: 20px;*/
+/*}*/
+
