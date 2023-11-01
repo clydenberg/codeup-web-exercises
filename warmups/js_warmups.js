@@ -181,4 +181,50 @@ const createPairs = (arr) =>{
     console.log(studentPairs);
 }
 
-createPairs(students);
+//createPairs(students);
+
+const digitalRoot = (n) => {
+    let digiroot;
+    let numArray = n.toString().split(``);
+
+    if(n <= 9){
+        return n;
+    }
+    while(numArray.length > 1){
+        digiroot = 0;
+        for(let number of numArray){
+            digiroot += parseFloat(number);
+        }
+        numArray = digiroot.toString().split(``);
+    }
+    digiroot = parseFloat(numArray.join(``));
+    return digiroot;
+}
+
+//console.log(digitalRoot(651));
+
+// const isPangram = (string) => {
+//     let pangramPattern = /^(?=.*a)(?=.*b)(?=.*c)(?=.*d)(?=.*e)(?=.*f)(?=.*g)(?=.*h)(?=.*i)(?=.*j)(?=.*k)(?=.*l)(?=.*m)(?=.*n)(?=.*o)(?=.*p)(?=.*q)(?=.*r)(?=.*s)(?=.*t)(?=.*u)(?=.*v)(?=.*w)(?=.*x)(?=.*y)(?=.*z).*$/
+//     let pangram = pangramPattern.test(string)
+//     if(pangram){
+//         console.log(`I am a pangram`);
+//     }else{
+//         console.log(`I'm not a pangram`);
+//     }
+// }
+//
+// isPangram(`abcdefghijklmnopqrstuvwxyz`);
+
+const isPangram = (string) => {
+    let alphabet = `abcdefghijklmnopqrstuvwxyz`.split(``);
+    if(typeof string !== `string`){
+        return false;
+    }
+
+    for(let letter of alphabet){
+        if(!string.toLowerCase().includes(letter)){
+            return false
+        }
+    }
+    return true;
+}
