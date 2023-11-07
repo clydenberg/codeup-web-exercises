@@ -25,6 +25,7 @@
     culpa qui officia deserunt mollit anim id est laborum.
 </p>
 <script>
+
         "use strict";
         // TODO: Uncomment next line and get the main header element by id
 
@@ -55,14 +56,18 @@
             }
         }
 
-        listItems[0].style.color = `blue`;
+        document.querySelector(`li[data-dbid="1"]`).style.color = `blue`;
+        // listItems[0].style.color = `blue`;
 
 
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
-        const subParagraphs = document.querySelector(`.sub-paragraph`);
+
+        const subParagraphs = document.querySelectorAll(`.sub-paragraph`);
 
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
-        subParagraphs.innerText = `Mission Accomplished`;
+
+        subParagraphs[0].innerText = `Mission Accomplished`;
+
 </script>
 </body>
 </html>
