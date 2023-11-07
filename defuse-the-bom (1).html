@@ -13,13 +13,13 @@
 (function() {
     "use strict";
 
-    var detonationTimer = 5;
+    let detonationTimer = 5;
 
     // TODO: This function needs to be called once every second
     function updateTimer() {
         if (detonationTimer === 0) {
             alert('EXTERMINATE!');
-            document.body.innerHTML = '';
+            document.body.innerHTML = '<video src="" autoPlay loop muted></video>';
         } else if (detonationTimer > 0) {
             document.getElementById('timer').innerHTML = detonationTimer;
         }
@@ -45,9 +45,10 @@
     // This causes the defuseTheBOM() function to be called
     // when the "defuser" button is clicked.
     // We will learn about events in the DOM lessons
-    var defuser = document.getElementById('defuser');
+    const defuser = document.getElementById('defuser');
     defuser.addEventListener('click', defuseTheBOM);
 })();
+
 </script>
 </body>
 </html>
