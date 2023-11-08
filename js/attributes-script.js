@@ -15,7 +15,7 @@ const cardTimers = () =>{
     const profileName = document.querySelector(`#profile-name`);
 
     setTimeout(()=>{
-        profileName.innerHTML = `Senji Red Knife Wielder`
+        profileName.innerText = `Senji Red Knife Wielder`
     }, 4000);
 
     const profileDesc = document.querySelector(`#profile-desc`);
@@ -53,5 +53,5 @@ const cardTimers = () =>{
 }
 
 (()=>{
-    // cardTimers();
+    cardTimers();
 })();

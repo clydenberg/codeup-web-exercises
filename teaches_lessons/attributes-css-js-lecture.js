@@ -1,3 +1,10 @@
+const handlePeriodKey = (e) => {
+    if(e.key === `.`){
+        alert(`pressed the period key`);
+        document.body.removeEventListener(`keydown`, handlePeriodKey);
+    }
+};
+
 (() => {
     // const headerRow = document.querySelector(`header.container:has(.row)`);
     // console.log(headerRow.innerHTML);
@@ -16,35 +23,51 @@
     // const hasId = heroH1.hasAttribute(`id`);
 
     //CLASS MANIPULATION
-    const menuToggle = document.querySelector(`.toggle-menu`);
-
-    const mobileMenu = document.querySelector(`.mobile-menu`);
-
-    menuToggle.addEventListener(`click`, () => {
-        if(mobileMenu.classList.contains(`open`)){
-            mobileMenu.classList.remove(`open`);
-        } else{
-            mobileMenu.classList.add(`open`);
-        }
+    // const menuToggle = document.querySelector(`.toggle-menu`);
+    //
+    // const mobileMenu = document.querySelector(`.mobile-menu`);
+    //
+    // menuToggle.addEventListener(`click`, () => {
+    //     if(mobileMenu.classList.contains(`open`)){
+    //         mobileMenu.classList.remove(`open`);
+    //     } else{
+    //         mobileMenu.classList.add(`open`);
+    //     }
 
         // CHANGING AN IMG
-        const heroImg = document.querySelector(".hero img");
+        // const heroImg = document.querySelector(".hero img");
+        //
+        // setInterval(() => {
+        //     heroImg.classList.add("fade");
+        //     setTimeout(() => {
+        //         if (heroImg.getAttribute("src") === "./img/kitten-photo.jpeg") {
+        //             heroImg.setAttribute("src", "./img/puppy-photo.jpeg");
+        //             heroImg.setAttribute("alt", "Puppy photo");
+        //         } else {
+        //             heroImg.setAttribute("src", "./img/kitten-photo.jpeg");
+        //             heroImg.setAttribute("alt", "Kitty photo");
+        //         }
+        //         heroImg.classList.remove("fade");
+        //     }, 300);
+        //     //
+        // }, 3000);
+    // });
 
-        setInterval(() => {
-            heroImg.classList.add("fade");
-            setTimeout(() => {
-                if (heroImg.getAttribute("src") === "./img/kitten-photo.jpeg") {
-                    heroImg.setAttribute("src", "./img/puppy-photo.jpeg");
-                    heroImg.setAttribute("alt", "Puppy photo");
-                } else {
-                    heroImg.setAttribute("src", "./img/kitten-photo.jpeg");
-                    heroImg.setAttribute("alt", "Kitty photo");
-                }
-                heroImg.classList.remove("fade");
-            }, 300);
-            //
-        }, 3000);
-    });
+
+    //BUTTON EVENTS
+    const sayHelloBtns = document.querySelectorAll(`.hello`);
+    for(let sayHelloBtn of sayHelloBtns){
+        sayHelloBtn.addEventListener(`click`, event => {
+            // console.log(event);
+            const name = event.target.getAttribute(`data-name`);
+            alert(`hello, ${name}!`);
+        });
+    }
+
+    //KEYBOARD EVENTS
+
+    document.body.addEventListener(`keydown`, handlePeriodKey);
+
 
 
 })();
