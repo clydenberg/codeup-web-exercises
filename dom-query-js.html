@@ -31,55 +31,53 @@
 
 
 <script>
-
         "use strict";
         // TODO: Uncomment next line and get the main header element by id
 
-        const mainHeader = document.querySelector(`#main-header`);
-        const button1 = document.querySelector(`#btn1`);
+        // const mainHeader = document.querySelector(`#main-header`);
+        // const button1 = document.querySelector(`#btn1`);
 
         // TODO: Set inner html of mainHeader to "JavaScript is Cool"
 
-        button1.addEventListener('click', (e)=>{
-            console.log(e);
-            mainHeader.innerHTML = `JavaScript is COOL!`;
-        });
+        // button1.addEventListener('click', (e)=>{
+        //     mainHeader.innerHTML = `JavaScript is COOL!`;
+        // });
 
         // TODO: Uncomment the next line and get the sub header element by id
 
-        const subHeader = document.querySelector(`#sub-header`);
-        const button2 = document.querySelector(`#btn2`);
+        // const subHeader = document.querySelector(`#sub-header`);
+        // const button2 = document.querySelector(`#btn2`);
 
         // TODO: Set the text color of subHeader to blue
 
-        button2.addEventListener(`click`, (e)=>{
-            subHeader.style.color = `blue`;
-        })
+        // button2.addEventListener(`click`, (e)=>{
+        //     subHeader.style.color = `blue`;
+        // })
 
         // TODO: Uncomment the next line and get all list items
 
-        const listItems = document.querySelectorAll(`li`);
-        const button3 = document.querySelector(`#btn3`);
+        // const listItems = document.querySelectorAll(`li`);
+        // const button3 = document.querySelector(`#btn3`);
 
         // TODO: Set text color on every other list item to grey
         // TODO: Set text color of li with dbid = 1 to blue
 
-        button3.addEventListener(`click`,(e)=>{
-            for(let liOdd of listItems){
-                if(liOdd.dataset.dbid % 2 === 1){
-                    liOdd.style.color = `grey`;
-                }
-            }
-        })
+        // button3.addEventListener(`click`,(e)=>{
+        //     for(let liOdd of listItems){
+        //         if(liOdd.dataset.dbid % 2 === 0){
+        //             liOdd.style.color = `grey`;
+        //         }
+        //     }
+        // })
 
-        const dbid1 = document.querySelector(`li[data-dbid="1"]`);
-        const handleBKey = (`keydown`, (e)=>{
-            if(e.key === `b`){
-                alert(`you pressed b`);
-                dbid1.style.color = `blue`;
-                document.body.removeEventListener(`keydown`, handleBKey);
-            }
-        });
+        // const dbid1 = document.querySelector(`li[data-dbid="1"]`);
+        // const handleBKey = (`keydown`, (e)=>{
+        //     if(e.key === `b`){
+        //         alert(`you pressed b`);
+        //         dbid1.style.color = `blue`;
+        //         document.body.removeEventListener(`keydown`, handleBKey);
+        //     }
+        // });
 
 
         // listItems[0].style.color = `blue`;
@@ -87,18 +85,45 @@
 
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
 
-        const subParagraphs = document.querySelectorAll(`.sub-paragraph`);
-        const button4 = document.querySelector(`#btn4`);
+        // const subParagraphs = document.querySelectorAll(`.sub-paragraph`);
+        // const button4 = document.querySelector(`#btn4`);
 
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
 
-        button4.addEventListener(`click`, (e)=>{
-            subParagraphs[0].innerText = `Mission Accomplished`;
+        // button4.addEventListener(`click`, (e)=>{
+        //     subParagraphs[0].innerText = `Mission Accomplished`;
+        // });
+
+        const ranClr = [`blue`,`orange`,`green`,`pink`,`red`,`purple`]
+        const allH1 = document.querySelector(`h1`);
+        allH1.addEventListener(`click`, (e)=>{
+           const colors = Math.floor(Math.random() * ranClr.length);
+           allH1.style.color = ranClr[colors];
         });
 
 
+        const allPtags = document.querySelector(`p`);
+        allPtags.addEventListener(`dblclick`, (e)=>{
+           allPtags.style.fontSize = `18px`;
+        });
+
+        const allLists = document.querySelectorAll(`li`);
+
+            for(let list of allLists){
+                list.addEventListener(`mouseenter`, (e)=>{
+                list.style.color = `red`;
+                });
+            }
+
+
+        for(let list of allLists){
+            list.addEventListener(`mouseleave`, (e)=>{
+                list.style.color = `black`;
+            });
+        }
+
         (()=>{
-            document.body.addEventListener(`keydown`, handleBKey);
+            // document.body.addEventListener(`keydown`, handleBKey);
         })();
 </script>
 </body>
