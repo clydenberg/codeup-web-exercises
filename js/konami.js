@@ -1,4 +1,6 @@
 
+/*would calling the event a "recording of the users actions that is defined as an object and described by its properties" be accurate?*/
+
 //INSTRUCTIONS//
 
 //1:log a key press
@@ -51,6 +53,7 @@ const konamiCheck = (e, keysPressed, daCode) =>{
 */
 
 const konamiCheck = (e, keysPressed, daCode) =>{
+    console.log(e);
     keysPressed.push(e.key);
     for (let i = 0; i < keysPressed.length; i++) {
         if (keysPressed[i] !== daCode[i]) {
@@ -61,6 +64,7 @@ const konamiCheck = (e, keysPressed, daCode) =>{
         if (keysPressed.length - 1 === daCode.length - 1){
             alert (`you added 30 lives`);
             document.body.style.backgroundColor = `turquoise`;
+            window.location = `https://www.konami.com/en/`;
             keysPressed = [];
         }
     }
@@ -84,4 +88,6 @@ const konamiCheck = (e, keysPressed, daCode) =>{
     document.body.addEventListener('keydown',e=> {
         emptyArray = konamiCheck(e, emptyArray, konamiCode);
     });
+
+
 })();
