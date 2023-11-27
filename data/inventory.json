@@ -1,0 +1,101 @@
+[
+  {
+    "title": "Hammer",
+    "quantity": 25,
+    "categories": [
+      "tool"
+    ],
+    "price": 20,
+    "img": "./img/minecraft_hammer.webp"
+  },
+  {
+    "title": "Drill",
+    "quantity": 5,
+    "categories": [
+      "tool",
+      "powered"
+    ],
+    "price": 100,
+    "img": "./img/Diamond_Drill.webp"
+  },
+  {
+    "title": "Mower",
+    "quantity": 5,
+    "categories": [
+      "tool",
+      "gas",
+      "outdoor"
+    ],
+    "price": 200,
+    "img": "./img/minecraft_lawnMower.png"
+  },
+  {
+    "title": "Screwdrivers",
+    "quantity": 25,
+    "categories": [
+      "tool"
+    ],
+    "price": 10,
+    "img": "./img/minecraft_screwdriver.jpeg"
+  },
+  {
+    "title": "Mower",
+    "quantity": 5,
+    "categories": [
+      "tool",
+      "gas",
+      "outdoor"
+    ],
+    "price": 200,
+    "img": "./img/minecraft_lawnMower.png"
+  },
+  {
+    "title": "Screwdrivers",
+    "quantity": 25,
+    "categories": [
+      "tool"
+    ],
+    "price": 10,
+    "img": "./img/minecraft_screwdriver.jpeg"
+  },
+  {
+    "title": "Mower",
+    "quantity": 5,
+    "categories": [
+      "tool",
+      "gas",
+      "outdoor"
+    ],
+    "price": 200,
+    "img": "./img/minecraft_lawnMower.png"
+  },
+  {
+    "title": "Screwdrivers",
+    "quantity": 25,
+    "categories": [
+      "tool"
+    ],
+    "price": 10,
+    "img": "./img/minecraft_screwdriver.jpeg"
+  },
+  {
+    "title": "Mower",
+    "quantity": 5,
+    "categories": [
+      "tool",
+      "gas",
+      "outdoor"
+    ],
+    "price": 200,
+    "img": "./img/minecraft_lawnMower.png"
+  },
+  {
+    "title": "Screwdrivers",
+    "quantity": 25,
+    "categories": [
+      "tool"
+    ],
+    "price": 10,
+    "img": "./img/minecraft_screwdriver.jpeg"
+  }
+]

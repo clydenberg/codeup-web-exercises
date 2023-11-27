@@ -44,6 +44,8 @@ const getUserEvents = async (username = "clydenberg") => {
 
     const userEvents = await getUserEvents();
     const pushEvents = userEvents.filter(e=> e.type === "PushEvent");
-    const lastPushDate = pushEvents[0].created_at;
-    console.log(lastPushDate);
+    const lastPushDate = pushEvents[0];
+    const createLastPushDate = new Date(lastPushDate.created_at)
+    console.log("last push event date =>", createLastPushDate);
 })();
+
