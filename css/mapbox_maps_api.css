@@ -1,7 +1,6 @@
 @import url("../css/bootstrap.css") layer(framework);
 @import url("https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css") layer(mapbox);
 
-
 .page-wrapper{
     min-height: 100dvh;
     display: flex;
@@ -10,13 +9,24 @@
 
 .zoomIn{
     position: fixed;
-    top:30px;
-    right:30px;
+    z-index: 2;
+    top: 60px;
+    right: 30px;
 }
 
 .zoomOut{
-    position: absolute;
-    top:40px;
-    right:30px;
+    position: fixed;
+    z-index: 2;
+    top: 30px;
+    right: 30px;
 }
 
+.searchBar{
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    width: 30%;
+    height: 100px;
+    background-color: #ffffff;
+}

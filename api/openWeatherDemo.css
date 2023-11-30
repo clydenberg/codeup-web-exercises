@@ -1,0 +1,188 @@
+@import url("../css/bootstrap.css") layer(framework);
+@import url("https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css") layer(mapbox);
+
+.page-wrapper{
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+}
+
+h1,h2,h3,h4,h5,h6{
+    padding: unset;
+    margin: unset;
+}
+
+.weatherBar{
+    position: fixed;
+    z-index: 2;
+    bottom: -55%;
+    width: 100%;
+    max-height: 55%;
+    pointer-events: all;
+    transition: bottom 0.5s ease-in-out;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    &.open{
+        bottom: 0;
+    }
+}
+
+.searchSection{
+    display: flex;
+    align-items: center;
+}
+
+.searchForm{
+    width: 100%;
+    justify-content: space-between;
+}
+
+.badLabel{
+    width: 75%;
+}
+
+#address{
+    padding: 3px;
+    border-radius: 10px;
+    background-color: #fff;
+    opacity: 80%;
+    font-size: 25px;
+    font-weight: 600;
+    width: 100%;
+    border: 2px solid #25002c;
+    &::placeholder{
+        color: #25002c;
+    }
+}
+
+.searchAddress{
+    background-color: #fff;
+    opacity: 80%;
+    border: 2px solid #25002c;
+    border-radius: 10px;
+    font-size: 25px;
+    padding: 3px;
+    width: 25%;
+    color: #25002c;
+}
+
+.openSearchSection{
+
+}
+
+.weatherBarBtn{
+    position: relative;
+    padding: unset;
+    margin: unset;
+    top: -140px;
+    width: 70px;
+    max-height: 70px;
+    border-radius: 999px;
+    border: 2px solid #25002c;
+    background-image: linear-gradient(to bottom right, lightblue, deepskyblue, midnightblue);
+    font-weight: 900;
+    font-size: 60px;
+    color: #25002c;
+    transition: all ease .3s;
+    opacity: 50%;
+    &.close{
+        top: -10px;
+    }
+    &:hover{
+        transform: scale(1.2);
+    }
+}
+
+.btn-txt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -5px;
+}
+
+.currentLocation{
+    background-color: white;
+    border-radius: 10px;
+    opacity: 80%;
+    border: 2px solid #25002c;
+}
+
+.displayLocation{
+
+}
+
+.currentAddress{
+    font-size: 20px;
+    padding: 5px 5px 5px 40px;
+}
+
+
+.weatherCards{
+    display: flex;
+    gap: 5px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.weatherCard{
+    position: relative;
+    background-image: linear-gradient(to bottom right, lightblue, deepskyblue, midnightblue);
+    width: 19%;
+    padding: 10px;
+    border-radius: 10px;
+    opacity: 90%;
+    transition: all ease .3s;
+    color: #000;
+    &:hover{
+        transform: scale(1.1);
+    }
+}
+
+.weatherCardTitle{
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.iconHolder{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.iconImg{
+    background-image: linear-gradient(180deg , #fff, lightgray, dimgray);
+    background-color: gray;
+    border-radius: 999px;
+    width: 100px;
+    height: 100px;
+    border: 2px solid #25002c;
+}
+
+.statTable{
+    align-items: center;
+    justify-content: space-between;
+    width: 150%;
+}
+
+.statistic{
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.statData{
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
+
+.container-fluid {
+    pointer-events: none;
+    &#map {
+        pointer-events: all;
+    }
+    /*& .col > * {*/
+    /*    pointer-events: all;*/
+    /*}*/
+}

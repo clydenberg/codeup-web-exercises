@@ -1,6 +1,7 @@
 
 
 import {keys} from "../js/keys.js";
+// console.log(keys.mapbox);
 
 const createMap = (containerElem, coordinates) => {
     const map = new mapboxgl.Map({
@@ -8,7 +9,7 @@ const createMap = (containerElem, coordinates) => {
         // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
         style: "mapbox://styles/mapbox/navigation-night-v1", // style URL
         center: coordinates, // starting position [lng, lat]
-        zoom: 9, // starting zoom
+        zoom: 10, // starting zoom
         keyboard: false,
     });
     map.flyTo({
@@ -18,6 +19,7 @@ const createMap = (containerElem, coordinates) => {
     });
     return map;
 };
+
 
 const getCoordinates = async (searchText) =>{
     searchText = encodeURIComponent(searchText);
@@ -63,16 +65,43 @@ const handleDragEnd = async (e, map) =>{
     console.log(address);
 }
 
+const handleZoomIn = async (map) =>{
+    const zoomInBtn = document.querySelector(`.zoomIn`);
+    zoomInBtn.addEventListener(`click`, (e)=>{
+        const currentZoom = map.getZoom();
+       map.flyTo({
+           zoom: currentZoom + 1
+       })
+    });
+}
 
+const handleZoomOut = async (map) =>{
+    const zoomOutBtn = document.querySelector(`.zoomOut`);
+    zoomOutBtn.addEventListener(`click`, (e)=>{
+        const currentZoom = map.getZoom();
+        map.flyTo({
+            zoom: currentZoom - 1
+        })
+    });
+}
 
+const handleUserSearch = () =>{
+    const userSearch = document.querySelector(`#address`);
+    userSearch.addEventListener(`submit`, async (e)=>{
+        e.preventDefault();
+        const userSearchText = document.querySelector(`#userSearch`).value;
+        console.log(userSearchText);
+        const coordinates = await getCoordinates(userSearchText);
+        console.log(coordinates);
+    });
+}
 
 (async()=>{
-
-    const coordinates = await getCoordinates("8700 Tesoro Dr, San Antonio");
-    // console.log(coordinates);
-    mapboxgl.accessToken = keys.mapbox; //
+    const coordinates = await getCoordinates(" 4465 W Flamingo Rd, Las Vegas, NV 89103");
+    mapboxgl.accessToken = keys.mapbox;
     const map = createMap("map", coordinates);
-    const popup = new mapboxgl.Popup().setHTML("<p>We live here now.</p>");
+    console.log(map);
+    const popup = new mapboxgl.Popup().setHTML("<p>UMIYA.</p>");
     const marker = new mapboxgl.Marker({
         draggable: true,
     })
@@ -82,7 +111,7 @@ const handleDragEnd = async (e, map) =>{
     marker.on("dragend", (e) => {
         handleDragEnd(e, map);
     });
+    await handleZoomIn(map);
+    await handleZoomOut(map);
 
-
-
-})()
+})();
